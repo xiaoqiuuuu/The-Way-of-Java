@@ -1,0 +1,80 @@
+<!--
+ * @Author: Weiqt 2365164682@qq.com
+ * @Date: 2023-10-05 14:56:46
+ * @LastEditors: Weiqt 2365164682@qq.com
+ * @LastEditTime: 2023-10-11 13:43:10
+ * @FilePath: \study\html标签.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+
+
+<!DOCTYPE html>  <!--文档声明标签-->
+<html lang="en"> <!-- 当前文档的显示语言，可以用 zh-CN 就是中文网页 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 标签学习</title> 
+</head>
+    <p id="returnback"></p>
+    <h1><div>标题标签,h1->h6递减</div></h1>
+    <p>我是一个段落标签，用来定义段落，将网页分为若干个段落</p>
+    <!--分段必须用 <p></p> 标签，-->
+    <p>我是一个换行标签 <br/> 可以将文字强制换行 <br/> 我是一个单标签 </p>
+
+    <h1>文本格式化标签，加粗，斜体，换行等</h1>
+    
+    <p>
+        <strong>这段文字被加粗了<br/></strong>
+        <b>我也能加粗文字，但语义不如 strong 标签强烈</b>
+    </p>
+    
+    <p> 
+        <em>我是倾斜的文字<br/></em>
+        <i>我也能让文字倾斜</i>
+    </p>
+
+    <p>
+        <del>我是删除线<br/></del>
+        <s>我也能是删除线</s>
+    </p>
+
+    <p>
+        <ins>我是下划线<br/></ins>
+        <u>我也能是下划线</u>
+    </p>
+
+    <p>
+        <div>我是一个超大盒子标签，我单独占一行</div>
+        <span>我是一个小盒子，不能单独占一行</span>
+        <div><span>我们的作用</span><span> 都是用来布局</span></div>
+    </p>V  
+
+    <h4>怎么使用图像标签</h4>
+    <img src="图片1.png">
+    <h4>图片加载失败，用文字代替</h4>
+    
+    <div><img src="我是一个不存在的图片" alt="抱歉，图片加载失败了呢~"/> </div>
+    <img src="图片3.png" title = "我是用来提示信息的属性"/>
+    
+    <img src="图片4.png" border = "15"/>
+    <p>除此之外，图像标签还有 width，height 来设置图片属性，<br/>
+        属性需要写在 src 的后面，属性之间没有顺序，用空格隔开 </p>
+    
+
+    <h4>超链接</h4>
+    <p>语法:&lta href="目标地址" target="窗口弹出的方式"&gt文字或图片&lt/a&gt</p>
+    <div>我是一个外部连接</div>
+    <a href="http://www.bilibili.com" target="_blank"><img src="图片5.png"/></a>
+    <div>我是一个内部连接</div>
+    <a href="图片6.png" target="_self"><img src="图片6.png"/></a>
+    <h5>锚点连接</h5>
+    <a href="#returnback"><img src="图片7.png" size = "20" width="50%",height="80%"/></a>
+    <h5>下载链接</h5>
+    <a href="图片8.zip"><img src="图片8.png" size = "20" width="50%",height="80%"/></a>
+
+    <h4>特殊字符表</h4>
+    <a href="图片9.png"><img src="图片9.png" size = "20" width="50%",height="80%"/></a>
+
+
+</body>
+</html>
