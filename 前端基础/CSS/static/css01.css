@@ -1,0 +1,150 @@
+.user-card {
+    width: 366px;
+    height: 257px;
+
+    margin: 100px auto;
+
+    /* background-color: aqua; */
+    box-shadow: 2px 2px 5px lightgray;
+    border-radius: 5px;
+}
+
+.user-card-head {
+    background-size: cover;
+    width: 100%;
+    height: 85px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.user-card-body {
+    width: 366px;
+    height: 172px;
+}
+
+.user-card-body-left {
+    width: 70px;
+    height: 100%;
+    float: left;
+    /* background-color: aqua; */
+    /* background-image: url('https://www.acwing.com/user/profile/index/');
+    background-size: cover;
+    width: 100%; */
+}
+
+.user-card-body-left img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: 12px;
+    left: 11px;
+    border-radius: 50%;
+}
+
+.user-card-body-right {
+    width: calc(100% - 70px);
+    height: 100%;
+    float: left;
+    /* background-color: brown; */
+    /* margin-left: 12px; */
+}
+
+.user-card-body-right-text {
+    width: 100%;
+    height: 60%;
+    margin-left: 12px;
+}
+
+.user-card-body-right-text-username {
+    /* font-size: 16px;
+    color: #222222;
+    font-weight: bold; */
+    margin: 12px 0 12px 0;
+
+    /* cursor: pointer; */
+}
+
+.user-card-body-right-text-username>a {
+    font-size: 16px;
+    color: #222222;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+
+    text-decoration: none;
+}
+
+.user-card-body-right-text-username>span:nth-child(2) {
+    font-size: 12px;
+    color: #FB6A00;
+    font-style: italic;
+
+}
+
+.user-card-body-right-text-reputation {
+    /* padding-top: 18px; 
+    box-sizing: border-box;
+    margin-left: 12px; */
+
+    cursor: pointer;
+}
+
+.user-card-body-right-text-reputation-item {
+    margin: 0 18px 0 0;
+}
+
+.user-card-body-right-text-reputation-item>span:nth-child(1) {
+    font-size: 12px;
+    color: #18191C;
+}
+
+.user-card-body-right-text-reputation-item>span:nth-child(2) {
+    font-size: 12px;
+    color: #9499A0;
+    margin: 0 0 0 3px;
+}
+
+.user-card-body-right-text-info {
+    margin-top: 5px;
+    font-size: 12px;
+    word-break: break-all;
+}
+.user-card-body-right-text-info > a {
+    word-break: break-all;
+}
+
+.user-card-body-right-button>button {
+    width: 102px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 12px;
+
+    position: relative;
+    top: 1px;
+
+    cursor: pointer;
+}
+
+.user-card-body-right-button>button:nth-child(1) {
+    background-color: #00B5E5;
+    margin-right: 8px;
+    color: white;
+}
+
+.user-card-body-right-button>button:nth-child(1):hover {
+    background-color: #00A1D6;
+    transition: 700ms;
+}
+
+.user-card-body-right-button>button:nth-child(2) {
+    background-color: white;
+    border: #6D757A solid 1px;
+    color: #6D757A;
+}
+
+.user-card-body-right-button>button:nth-child(2):hover {
+    border-color: #00B5E5;
+    color: #00B5E5;
+    transform: 1000ms;
+}
