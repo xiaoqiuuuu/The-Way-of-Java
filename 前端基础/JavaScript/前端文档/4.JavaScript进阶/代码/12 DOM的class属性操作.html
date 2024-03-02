@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .c1{
+            background-color: rebeccapurple;
+        }
+
+        .c2{
+            color: red;
+        }
+
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="c1">hello JS</div>
+
+
+<script>
+    var ele = document.querySelector(".c1");
+    ele.onclick = function () {
+        // this.classList.add("c2");
+        this.classList.add("hide");
+    }
+</script>
+
+</body>
+</html>

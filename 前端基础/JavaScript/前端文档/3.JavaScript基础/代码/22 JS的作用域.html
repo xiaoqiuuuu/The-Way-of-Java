@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e</title>
+
+    <script>
+
+
+        // var name = "yuan"; // 声明一个全局变量 name并赋值”yuan“
+        // name = "张三";  // 对已经存在的变量name重新赋值 ”张三“
+        // console.log(name);
+        //
+        // age = 18 ;  // 之前不存在age变量，这里等同于var age = 19 即声明全局变量age并赋值为18
+        //
+        // var  gender = "male";
+        // var  gender = "female"; // 原内存释放与新内存开辟，指针指向新开辟的内存
+        // console.log(gender);
+
+
+
+        // var num = 10; // 在函数外部声明的变量, 全局变量
+        function func(){
+            // var num = 20;
+            console.log("函数内部num：",num)
+        }
+        func();
+        console.log("全局num：",num);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

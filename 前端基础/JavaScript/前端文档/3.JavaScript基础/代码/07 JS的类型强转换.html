@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+        //  转换number类型
+        var box1 = "一共100件"; // 转换会失败
+        var box2 = "100件";     // 转换会成功
+        var box3 = "100";     // 转换会成功
+        var ret = parseInt(box3);
+        console.log(ret);   // NaN 属于number类型
+
+        var box5 = "3.14";
+        console.log(parseFloat(box5) ); // 3.14
+        //
+        var box6 = "3.1.4";  // 使用Number转换的数据里面必须是纯数字!!!!否则都会转换失败
+        console.log(parseFloat(box6));
+        console.log(Number(box6));  // NaN
+        console.log(Number(box2));  // NaN
+
+
+        //  转换字符串类型   .toString()
+
+        var x = 100;
+        console.log(x.toString(),typeof x.toString());
+
+        var b = true;
+        console.log(b.toString(),typeof b.toString());
+
+
+        // 转换布尔类型（零值）
+        // console.log(Boolean(4>5));
+        // console.log(Boolean(8>5));
+        console.log(Boolean(""));
+        console.log(Boolean(0));
+        console.log(Boolean(1));
+        console.log(Boolean(-1));
+        console.log(Boolean("0"));
+        console.log(Boolean(null));
+        console.log(Boolean([]));
+        console.log(Boolean({}));
+        console.log(Boolean(undefined));
+
+
+        if("false"){
+            console.log("alvin!")
+        }
+
+
+        console.log(1=="1");
+        console.log(1+"200",typeof (1+"200"));
+        console.log(1-"200",typeof (1-"200"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

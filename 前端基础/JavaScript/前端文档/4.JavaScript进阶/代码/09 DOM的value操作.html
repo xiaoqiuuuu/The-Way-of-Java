@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+
+<input type="text" class="c1" value="hello world"><button class="btn">change</button>
+
+<select name="" id="i1">
+    <option value="shandong">山东省</option>
+    <option value="hebei" selected="selected">河北省</option>
+    <option value="hunan">湖南省</option>
+</select>
+<button class="btn2">change2</button>
+
+
+<p><textarea name="" id="i2" cols="30" rows="10">yuan</textarea></p>
+
+<script>
+
+    // input标签
+
+    // var ele1 = document.querySelector(".c1");
+    // console.log(ele1.value);
+    // ele1.value = "hello JS!";
+
+    var btn = document.getElementsByClassName("btn")[0];
+    btn.onclick = function () {
+        // alert(123)
+        // ele1.value = "hello JS!";
+        console.log(this.previousElementSibling);
+        this.previousElementSibling.value = "hello JS!";
+    };
+
+    // select标签
+
+    var ele2 = document.querySelector("#i1");
+    console.log(ele2.value);
+    var btn2 = document.getElementsByClassName("btn2")[0];
+    btn2.onclick = function () {
+        ele2.value = "shandong"
+    };
+
+    // textarea标签
+    var ele3 = document.querySelector("#i2");
+    console.log(ele3.value);
+    ele3.value = "welcome to JS world!"
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

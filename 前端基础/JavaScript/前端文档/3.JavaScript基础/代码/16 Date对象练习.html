@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+       var s=  "2021年03月2日 14:1:43 星期二";
+
+
+       function date_parse(date) {
+
+           var year = date.getFullYear();
+           var month = date.getMonth();
+           var day = date.getDate();
+           var hours = date.getHours();
+           var minutes = date.getMinutes();
+           var seconds = date.getSeconds();
+           var week = date.getDay();
+
+
+           return year+"年"+(month+1)+"月"+day+"日 "+hours+":"+minutes+":"+seconds+" "+week_parse(week)
+
+       }
+
+
+       function week_parse(week_num) {
+
+           var data = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+
+           return data[week_num]
+       }
+
+       var now  = new Date();
+
+       console.log(date_parse(now))
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

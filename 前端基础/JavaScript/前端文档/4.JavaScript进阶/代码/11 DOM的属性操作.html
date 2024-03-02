@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+
+<div class="c1" id="i1" k1="v1" value="xxx">hello world!</div>
+
+<script>
+
+   var ele = document.querySelector(".c1");
+
+   // console.log(ele.value);
+   console.log(ele.getAttribute("k1"));
+   console.log(ele.getAttribute("value"));
+   ele.setAttribute("k2","v2");
+   ele.removeAttribute("k1");
+
+
+</script>
+
+
+</body>
+</html>

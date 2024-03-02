@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+    <script>
+        function  dataParse(date) {
+            data = ["星期日" , "星期一" , "星期二" , "星期三" , "星期四" , "星期五" , "星期六"]
+
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let day = date.getDate();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let week = date.getDay();
+            return year + "年" + (month + 1) + "月" + day + "日" + " " + hours + ":" + minutes + ":" + seconds + " " + data[week];
+        }
+
+        let  now = new Date()
+        console.log(dataParse(now))
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    远程导入-->
+    <!--    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>-->
+    <!--本地导入-->
+    <script src="jquery3.6.js"></script>
+
+</head>
+<body>
+
+
+<div class="c1">
+    <div class="c2">
+        <div class="c3">
+            <p>p1</p>
+        </div>
+    </div>
+    <p>p2</p>
+</div>
+
+<ul class="c4">
+    <li>111</li>
+    <li class="c5">222</li>
+    <li>333</li>
+    <li>444</li>
+    <li id="i1">555</li>
+    <li>666</li>
+</ul>
+
+
+<!--<div class="c5">666</div>-->
+<!--<div>777</div>-->
+
+
+<script>
+
+    // 查询儿子选择器
+    // console.log($(".c1").children());
+    // console.log($(".c1").children("p"));
+
+    // 查询后代
+
+    // console.log($(".c1").find());
+    // console.log($(".c1").find(".c3"));
+
+    // 查询兄弟
+
+    // $(".c5").next().css("color","red")
+    // $(".c5").nextAll().css("color","red")
+    // $(".c5").nextUntil("#i1").css("color","red");
+
+
+    // $("#i1").prev().css("color","red");
+    // $("#i1").prevAll().css("color","red");
+    // $("#i1").prevUntil(".c5").css("color","red")
+
+    // $(".c5").siblings().css("color","red");
+
+
+    // 查找父标签
+
+    console.log($(".c3").parent());
+    console.log($(".c3").parent().parent());
+
+    // console.log($(".c3").parents());//
+    // console.log($(".c3").parentsUntil("body"))
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+# 学习路线：
+    Python基础
+    数据库（Mysql）
+    前端 
+    Django flask
+    项目阶段
+
+# HTTP协议：
+    请求协议：
+      请求首行   请求方式  URL路径？数据
+      请求头
+      空行
+      请求体
+      
+    GET和POST
+      响应首行
+      响应头
+      响应体
+      
+标签：
+  按格式： 
+      闭合标签：<h1>内容</h1>
+      自闭合标签：<img src=''>
+  
+  <标签名 属性1=“属性值1” 属性2=“属性值2”……>内容部分</标签名>
+  <标签名 属性1=“属性值1” 属性2=“属性值2”…… />
+  
+  <a><b>yuan</a></b>
+  
+  按功能分类：
+       块级标签 （block）:
+            独占一行
+            比如  p , h1-h6 ，div，ul，li
+       内联标签 （inline）:   
+            按内容占位置  
+            
+            b，strong，i，em del，span
+            a，img，input
+
+            
+        基本嵌套原则：
+            块级可以嵌套块级和内联
+            内联只可以嵌套内联
+            
+
+客户端（浏览器）向服务端发送请求形式：
+    
+    1、地址栏请求    get请求
+    2、超链接标签    get请求
+    3、form表单      get、post请求
+    4、ajax    
+    
+    
+    
+Content_Type : multipart/form-data  发送文件
+Content_Type : application/x-www-form-urlencoded      例如  "a=1&b=2&c=3"
+Content_Type : json      例如  {"a":1,"b":2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

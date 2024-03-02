@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+        // 算数运算符
+
+        // (1) 自加运算
+        var x = 10;
+        // x = x + 1;
+        // x += 2;
+        var ret = x++;   // 先赋值再计算： x += 1
+        // var ret = ++x;      //先计算再赋值：    x += 1
+        console.log(x);
+        console.log(ret);
+
+        // (2) 比较运算
+
+        console.log(1 == "1");
+        console.log(1 === "1");
+
+
+        // (3) 逻辑运算符
+
+        console.log(Boolean(3>2 && 2===1));
+        console.log(Boolean(3>2 || 2===1));
+        console.log(Boolean(!3>2));
+
+        // (4) 短路运算
+        console.log(1 && 2);
+        console.log(3 || 2);
+        console.log(0 && 2);
+        console.log(0 || 5);
+
+        // (5) 三元运算符
+        var age =2;
+        var ret = age>=18?"成年":"未成年";
+        console.log(ret)
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

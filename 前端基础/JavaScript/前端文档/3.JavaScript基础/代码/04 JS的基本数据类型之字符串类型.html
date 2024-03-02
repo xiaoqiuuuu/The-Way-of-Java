@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var s1 = "hello world";
+
+        console.log(s1.length);
+        console.log(s1.toUpperCase());
+        console.log(s1.indexOf("l"));
+        console.log(s1[2]);
+        // 切片操作
+        console.log(s1.slice(1,4));
+        console.log(s1.slice(0,4));
+        console.log(s1.slice(0,-1));
+        console.log(s1.slice());
+        console.log(s1.slice(3));
+        console.log(s1.slice(-4,-1));
+        console.log(s1.slice(-1,-4));  // ""
+
+        //  split分割方法
+        var ret = s1.split(" ");
+        console.log(ret);  // ["hello", "world"]
+
+        // substr截断方法
+        console.log(s1.substr(2,2));
+        var password = "    ge llo   ";
+
+        console.log(password.trim());
+        console.log(password.trim().length);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

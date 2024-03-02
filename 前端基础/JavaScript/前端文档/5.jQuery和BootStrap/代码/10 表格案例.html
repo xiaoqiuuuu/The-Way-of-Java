@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery3.6.js"></script>
+
+</head>
+<body>
+
+<button class="select_all">全选</button>
+<button class="cancel">取消</button>
+<button class="reverse">反选</button>
+<hr>
+<table border="1">
+    <tr>
+        <td>选择</td>
+        <td>姓名</td>
+        <td>年龄</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>张三</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>李四</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>王五</td>
+        <td>23</td>
+    </tr>
+</table>
+
+<script>
+
+    $(".select_all").click(function () {
+
+        $("table input:checkbox").prop("checked", true);
+
+    });
+    $(".cancel").click(function () {
+
+        $("table input:checkbox").prop("checked", false);
+
+    });
+
+    $(".reverse").click(function () {
+
+        /*
+         var $eles = $("table input:checkbox");
+
+         for(var i = 0;i<$eles.length;i++){
+             var state = $($eles[i]).prop("checked");
+             if (state){
+                 $($eles[i]).prop("checked",false);
+             }else {
+                 $($eles[i]).prop("checked",true);
+             }
+         }
+         */
+
+
+        /*
+        $("table input:checkbox").each(function () {
+
+            var state = $(this).prop("checked");
+            if (state){
+                $(this).prop("checked",false);
+            }else {
+                $(this).prop("checked",true);
+            }
+        })
+        */
+
+
+        $("table input:checkbox").each(function () {
+
+            $(this).prop("checked", !$(this).prop("checked"))
+
+        })
+
+
+    });
+
+</script>
+
+</body>
+</html>

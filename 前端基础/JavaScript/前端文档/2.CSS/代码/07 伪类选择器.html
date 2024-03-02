@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+           a:link{
+               color: red;
+           }
+           a:visited{
+               color: coral;
+           }
+           a:hover{
+               color: blue;
+           }
+           a:active{
+               color: rebeccapurple;
+           }
+
+           .c1 p:first-child{
+               color: red;
+           }
+
+           #i1:after{
+               content: "这是一个伪类构造的块级标签";
+               display: block;
+               color: red;
+           }
+
+
+    </style>
+</head>
+<body>
+
+<a href="">hello world! </a>
+
+<div class="c1">
+    <p>item1</p>
+    <p>item2</p>
+    <div>item3</div>
+    <p>item4</p>
+</div>
+
+<div id="i1">
+    DIV标签
+    <!--    <div style="color: red">这是一个伪类构造的块级标签</div>-->
+</div>
+
+
+
+
+
+</body>
+</html>

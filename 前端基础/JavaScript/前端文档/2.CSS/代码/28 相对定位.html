@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .c1{
+            width: 200px;
+            height: 200px;
+            background-color: indianred;
+
+        }
+
+        .c2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 相对定位： 参照物：元素本身位置  不脱离文档流                       */
+            /*position: relative;*/
+
+            /* 绝对定位： 参照物：已经定位的最近父级元素作为参照直至body标签   完全脱离文档流    */
+            position: absolute;
+            left: 200px;
+            top: 200px;
+
+
+        }
+
+        .c3{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .outer{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div class="c1"></div>
+<div class="outer">
+    <div class="c2"></div>
+</div>
+<div class="c3"></div>
+
+
+
+</body>
+</html>

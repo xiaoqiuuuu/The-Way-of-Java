@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<button class="add_btn">添加节点</button>
+<button class="del_btn">删除节点</button>
+<button class="replace_btn">替换节点</button>
+<div class="c1">
+    <h3>hello JS!</h3>
+    <h3 class="c2">hello world</h3>
+</div>
+
+
+<script>
+
+    var add_btn = document.querySelector(".add_btn");
+    var del_btn = document.querySelector(".del_btn");
+    var replace_btn = document.querySelector(".replace_btn");
+
+    var c1 = document.querySelector(".c1");
+    var c2 = document.querySelector(".c2");
+
+    add_btn.onclick = function () {
+        // 创建节点
+
+        var ele = document.createElement("img");  // <img>
+        ele.src = "https://img2.baidu.com/it/u=1613029778,1507777131&fm=26&fmt=auto&gp=0.jpg"
+        console.log(ele);
+
+
+        // 添加节点
+        // c1.appendChild(ele);
+
+        c1.insertBefore(ele, c2)
+
+    };
+
+
+    del_btn.onclick = function () {
+        // 删除子节点
+        c1.removeChild(c2);
+    };
+
+
+    replace_btn.onclick = function () {
+
+        // 创建替换节点
+
+        var ele = document.createElement("img");  // <img>
+        ele.src = "https://img2.baidu.com/it/u=1613029778,1507777131&fm=26&fmt=auto&gp=0.jpg"
+        console.log(ele);
+
+        // 替换节点
+        c1.replaceChild(ele, c2);
+
+    }
+
+
+</script>
+
+</body>
+</html>

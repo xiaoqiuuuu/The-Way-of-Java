@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+    console.log(window);
+
+    // window对象下的三个弹框方法
+
+    window.alert("磁盘空间不够！");
+
+    var res = window.confirm("请问是否打开一个新的窗口？");
+    console.log(res);
+
+    if(res){
+        window.open("http://www.baidu.com","_blank","width=800px,height=500px,left=200px,top=200px");
+    }
+
+    var res2 = window.prompt("请输入一个数字：");
+    console.log(res2);
+
+    window.close();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

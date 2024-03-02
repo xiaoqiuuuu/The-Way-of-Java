@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab{
+            width: 800px;
+            height: 300px;
+            /*border: 1px solid red;*/
+            margin: 200px auto;
+        }
+
+        .tab ul{
+            list-style: none;
+        }
+
+        .tab-title{
+            background-color: #f7f7f7;
+            border: 1px solid #eee;
+            border-bottom: 1px solid #e4393c;
+        }
+
+        .tab .tab-title li{
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+
+        li.current {
+            background-color: #e4393c;
+            color: #fff;
+            cursor: default;
+        }
+
+        .hide{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="tab">
+    <ul class="tab-title">
+        <li class="current" index="0">商品介绍</li>
+        <li class="" index="1">规格与包装</li>
+        <li class="" index="2">售后保障</li>
+        <li class="" index="3">商品评价</li>
+    </ul>
+
+    <ul class="tab-content">
+        <li>商品介绍...</li>
+        <li class="hide">规格与包装...</li>
+        <li class="hide">售后保障...</li>
+        <li class="hide">商品评价...</li>
+    </ul>
+</div>
+
+
+<script>
+     var titles = document.querySelectorAll(".tab-title li");
+     var contents = document.querySelectorAll(".tab-content li");
+     
+     for (var i = 0;i<titles.length;i++){
+         
+         titles[i].onclick = function () {
+             // (1) 触发事件标签拥有current样式
+             for (var j = 0;j<titles.length;j++){
+                 titles[j].classList.remove("current")
+             }
+
+             console.log(this);
+             this.classList.add("current");
+
+             // (2) 显示点击title对应的详情内容
+             var index = this.getAttribute("index");
+             // console.log(this.getAttribute("index"));
+             // console.log(contents[index]);
+
+
+             for (var z = 0;z<contents.length;z++){
+                 contents[z].classList.add("hide");
+             }
+
+             contents[index].classList.remove("hide");
+
+         }
+         
+     } 
+
+
+</script>
+
+
+
+</body>
+</html>

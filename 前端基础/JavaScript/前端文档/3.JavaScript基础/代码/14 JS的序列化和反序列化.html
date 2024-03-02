@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+
+       // var s = '{"name": "alvin", "age": 18}';
+       //
+       // // 把一个json字符串解析成JS能识别的数据类型：反序列化
+       // var data = JSON.parse(s);
+       // console.log(data,typeof data);
+       // console.log(data.name);
+       // console.log(data["age"]);
+
+
+
+       var res = {
+           state:true,
+           data:[123,234,345]
+       };
+
+       // 把JS的数据类型转换成json字符串：序列化
+        var res_json_str = JSON.stringify(res);
+        console.log(res_json_str,typeof res_json_str); // '{"state":true,"data":[123,234,345]}' string
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

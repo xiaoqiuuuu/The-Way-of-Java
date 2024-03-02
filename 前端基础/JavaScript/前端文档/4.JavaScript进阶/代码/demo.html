@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            width: 300px;
+        }
+        #title{
+            cursor: pointer;
+            background: #ccc;
+        }
+       #list{
+           display: none;
+           background:#fff;
+       }
+
+        #list div{
+            line-height: 50px;
+        }
+        #list  .item1{
+            background-color: green;
+        }
+
+         #list  .item2{
+            background-color: rebeccapurple;
+        }
+
+         #list  .item3{
+            background-color: lemonchiffon;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+        <div id="title">使用了onmouseover事件↓</div>
+        <div id="list">
+                <div class="item1">第一行</div>
+                <div class="item2">第二行</div>
+                <div class="item3">第三行</div>
+        </div>
+</div>
+<script>
+
+
+
+   var container=document.getElementById("container");
+   var title=document.getElementById("title");
+   var list=document.getElementById("list");
+   title.onmouseover=function(){
+       list.style.display="block";
+   };
+
+   container.onmouseout=function(){  // 改为onmouseout试一下
+       list.style.display="none";
+   };
+
+/*
+ 1.不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。
+ 2.只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+     /*
+
+
+     function 函数(形参1，形参2，...){
+        函数体
+     }
+
+     函数名(实参1,实参2,...)
+
+      */
+
+     function foo(x,y) {
+         console.log("x:",x);
+         console.log("y:",y);
+     }
+
+     foo(1,2,3);
+     foo(1);
+
+
+    // 默认参数
+    function stu_info(name,gender="male"){
+        console.log("姓名："+name+" 性别："+gender)
+    }
+
+    stu_info("yuan");
+
+
+    // arguments对象
+
+    function add() {
+        // console.log("arguments:",arguments);
+        // console.log(x+y)
+        var ret = 0;
+        for(var i in arguments){
+            ret+=arguments[i]
+        }
+        console.log(ret);
+    }
+
+    add(2,4,5);
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

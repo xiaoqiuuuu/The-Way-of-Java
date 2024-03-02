@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box {
+            width: 80%;
+            height: 270px;
+            margin: 20px auto;
+        }
+
+        .box td{
+            width: 180px;
+            text-align: center;
+        }
+
+        .box input{
+
+            padding: 5px 5px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>员工管理系统</h3>
+
+<div class="box">
+    <table border="1" cellpadding="5px" >
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>部门</th>
+            <th>删除</th>
+            <th>编辑</th>
+        </tr>
+        </thead>
+
+        <tbody class="tbody">
+        <tr>
+            <td>张三</td>
+            <td>23</td>
+            <td>销售</td>
+            <td>
+                <button onclick="del_tr(this)">删除</button>
+            </td>
+            <td>
+                <button onclick="edit_tr(this)">编辑</button>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>21</td>
+            <td>销售</td>
+            <td>
+                <button onclick="del_tr(this)">删除</button>
+            </td>
+            <td>
+                <button onclick="edit_tr(this)">编辑</button>
+            </td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>23</td>
+            <td>运营</td>
+            <td>
+                <button onclick="del_tr(this)">删除</button>
+            </td>
+            <td>
+                <button onclick="edit_tr(this)">编辑</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<fieldset class="add-box">
+    <legend>添加员工</legend>
+    <p>姓名：<input type="text" class="name"></p>
+    <p>年龄：<input type="text" class="age"></p>
+    <p>部门：
+        <select name="" id="i1">
+            <option value="销售">销售部</option>
+            <option value="运营">运营部</option>
+            <option value="财务">财务部</option>
+        </select>
+    </p>
+    <button class="add">添加</button>
+</fieldset>
+
+
+<script>
+
+    var add = document.querySelector(".add");
+    var tbody = document.querySelector(".tbody");
+    add.onclick = function () {
+
+        var inputs = document.querySelectorAll(".add-box input");
+        var tr = document.createElement("tr");
+        for (var i = 0; i < inputs.length; i++) {
+            var td = document.createElement("td"); // <td></td>
+            td.innerHTML = inputs[i].value;
+            tr.appendChild(td);
+            // 清空
+            inputs[i].value = ""
+        }
+
+        var s = document.querySelector("#i1");
+        td = document.createElement("td");
+        td.innerHTML = s.value;
+        tr.appendChild(td);
+
+
+        // 添加删除按钮
+        var button = document.createElement("button");
+        button.innerHTML = "删除";
+        button.setAttribute("onclick", "del_tr(this)");
+        td = document.createElement("td");
+        td.appendChild(button);
+        tr.appendChild(td);
+        // 添加编辑按钮
+        button = document.createElement("button");
+        button.innerHTML = "编辑";
+        button.setAttribute("onclick", "edit_tr(this)");
+        td = document.createElement("td");
+        td.appendChild(button);
+        tr.appendChild(td);
+
+
+        tbody.appendChild(tr);
+    };
+
+    function del_tr(self) {
+        var tr = self.parentElement.parentElement;
+        tbody.removeChild(tr);
+    }
+    
+    function edit_tr(self) {
+        self.innerHTML = "保存";
+        self.setAttribute("onclick","save(this)");
+
+
+        console.log(self.parentElement.parentElement.children);
+        var children_td = self.parentElement.parentElement.children;
+
+        for(var i=0;i<children_td.length-2;i++){
+
+            var inp = document.createElement("input");
+            inp.setAttribute("type","text");
+            // inp.value = children_td[i].innerHTML;
+            inp.setAttribute("value",children_td[i].innerHTML);
+            console.log("::",inp);
+            children_td[i].innerHTML = "";
+            children_td[i].appendChild(inp);
+        }
+
+
+        // tbody.replaceChild(,)
+
+    }
+
+    function save(self) {
+        self.innerHTML = "编辑";
+        self.setAttribute("onclick","edit_tr(this)");
+        var children_td = self.parentElement.parentElement.children;
+        for(var i=0;i<children_td.length-2;i++){
+
+            children_td[i].innerHTML = children_td[i].firstElementChild.value;
+        }
+
+
+
+    }
+
+</script>
+
+</body>
+</html>

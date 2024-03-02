@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c2 {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+    </style>
+    <script src="jquery3.6.js"></script>
+    <script>
+
+
+        /*
+
+
+        $对象.事件(function(){
+
+
+        })
+
+
+         */
+
+
+        // $(document).ready(function () {
+        //
+        // });
+
+        $(function () {
+
+            // 绑定事件
+            $(".c1").click(function () {
+                // alert("click")
+                // console.log("ok");
+                console.log(this);  // 事件触发函数中的this代指是触发事件的标签对象（dom对象）
+                // this.style.color = "red";
+
+                $(this).css("color", "red");
+            });
+
+            /*
+             $(".c1").bind("click",function () {
+                 alert(123)
+             });
+
+
+             $(".c1").on("dblclick", function () {
+                 alert("dblclick")
+             });
+
+             $(".c1").off("click");
+
+             */
+            // hover事件
+            $(".c2").hover(mouseover, mouseout);
+
+        });
+
+        function mouseover() {
+            console.log("over")
+        }
+
+        function mouseout() {
+            console.log("out")
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+<div class="c1">DIV</div>
+
+<div class="c2"></div>
+
+
+</body>
+</html>

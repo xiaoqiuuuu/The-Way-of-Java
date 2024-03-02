@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<select name="" id="provice">
+    <option value="">请选择省份</option>
+    <option value="hubei">湖北省</option>
+    <option value="hebei">河北省</option>
+    <option value="guangdong">广东省</option>
+</select>
+
+
+<select name="" id="city">
+    <option value="">请选择城市</option>
+</select>
+
+<script>
+
+    var data = {"hubei":["襄阳","武汉","荆州"],"hebei":["保定","石家庄","廊坊"],"guangdong":["深圳","广州","惠州"]}
+     var provice = document.querySelector("#provice");
+     var city = document.querySelector("#city");
+
+    provice.onchange = function () {
+         console.log(this.value);
+
+         var cities = data[this.value];
+         console.log(cities);
+
+
+         //清空方法
+         city.options.length = 1;
+
+         for (var index in cities){
+             console.log(cities[index]);
+
+             // 创建标签
+
+             var option = document.createElement("option");
+             option.innerHTML = cities[index];
+             city.appendChild(option);
+
+
+         }
+
+
+    }
+
+</script>
+
+</body>
+</html>

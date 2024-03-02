@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery3.6.js"></script>
+    <script>
+
+        $(function () {
+
+
+            $("#i1").blur(function () {
+
+                // 获取jquery对象的value属性值
+                console.log(this.value);
+                console.log($(this).val());
+
+                // 设置value属性值
+                $(this).val("hello world")
+
+            });
+
+
+            $("#i3").change(function () {
+                console.log(this.value);
+                console.log($(this).val());
+
+                $(this).val("guangdong");
+
+            });
+
+            console.log($("#i2").val());
+            console.log($("#i2").val("hello pig!"))
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<input type="text" id="i1">
+
+<select id="i3">
+    <option value="hebei">河北省</option>
+    <option value="hubei">湖北省</option>
+    <option value="guangdong">广东省</option>
+</select>
+
+<p><textarea name="" id="i2" cols="30" rows="10">123</textarea></p>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab {
+            width: 800px;
+            height: 300px;
+            /*border: 1px solid red;*/
+            margin: 200px auto;
+        }
+
+        .tab ul {
+            list-style: none;
+        }
+
+        .tab-title {
+            background-color: #f7f7f7;
+            border: 1px solid #eee;
+            border-bottom: 1px solid #e4393c;
+        }
+
+        .tab .tab-title li {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+
+        li.current {
+            background-color: #e4393c;
+            color: #fff;
+            cursor: default;
+        }
+
+        .hide {
+            display: none;
+        }
+
+
+    </style>
+
+    <script src="jquery3.6.js"></script>
+</head>
+<body>
+
+
+<div class="tab">
+    <ul class="tab-title">
+        <li class="current">商品介绍</li>
+        <li class="">规格与包装</li>
+        <li class="">售后保障</li>
+        <li class="">商品评价</li>
+    </ul>
+
+    <ul class="tab-content">
+        <li>商品介绍...</li>
+        <li class="hide">规格与包装...</li>
+        <li class="hide">售后保障...</li>
+        <li class="hide">商品评价...</li>
+    </ul>
+</div>
+
+
+<script>
+
+    $(".tab-title li").click(function () {
+        //  事件函数
+        // 点击标签获取current样式
+        $(this).addClass("current").siblings().removeClass("current");
+        // 详情内容的显示与隐藏
+        console.log($(this).index());
+        var index = $(this).index();
+        $(".tab-content li").eq(index).removeClass("hide").siblings().addClass("hide");
+
+    })
+
+
+</script>
+
+</body>
+</html>

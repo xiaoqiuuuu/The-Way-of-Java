@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .tb {
+            height: 300px;
+        }
+        .box{
+              margin: 10px auto;
+
+        }
+
+        .box td{
+            width: 170px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+<h3>员工管理系统</h3>
+
+<div class="tb">
+    <table class="box" border="1" cellpadding="5">
+    <thead>
+       <tr>
+           <th>姓名</th>
+           <th>年龄</th>
+           <th>部门</th>
+           <th>删除</th>
+           <th>编辑</th>
+       </tr>
+    </thead>
+
+    <tbody class="tbody">
+        <tr>
+            <td>张三</td>
+            <td>23</td>
+            <td>销售部</td>
+            <td><button onclick="del_btn(this)">删除</button></td>
+            <td><button onclick="edit_btn(this)">编辑</button></td>
+        </tr>
+
+        <tr>
+            <td>李四</td>
+            <td>23</td>
+            <td>财务部</td>
+            <td><button onclick="del_btn(this)">删除</button></td>
+            <td><button onclick="edit_btn(this)">编辑</button></td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>34</td>
+            <td>销售部</td>
+            <td><button onclick="del_btn(this)">删除</button></td>
+            <td><button onclick="edit_btn(this)">编辑</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<fieldset>
+    <legend>添加员工</legend>
+    <div class="add_box">
+        <p>姓名：<input type="text" id="name"></p>
+        <p>年龄：<input type="text" id="age"></p>
+        <p>部门：
+            <select name="" id="dep">
+                <option value="销售部">销售部</option>
+                <option value="运营部">运营部</option>
+                <option value="财务部">财务部</option>
+            </select>
+        </p>
+       <button class="submit">提交</button>
+    </div>
+
+</fieldset>
+
+
+<script>
+
+    var add_btn = document.querySelector(".submit");
+    var tbody = document.querySelector(".tbody");
+
+
+
+    add_btn.onclick = function () {
+
+
+        // 创建tr的dom对象
+        var tr = document.createElement("tr"); // <tr></tr>
+        var inps = document.querySelectorAll("#name,#age,#dep");
+        // console.log(inp);
+
+        for(var i=0;i<inps.length;i++){
+            var td = document.createElement("td");  // <td></td>
+            td.innerHTML = inps[i].value;
+            console.log(td);
+            tr.appendChild(td);
+
+        }
+
+        // 添加删除按钮
+        td = create_td("删除","del_btn(this)");
+        tr.appendChild(td);
+        // 添加编辑按钮
+        td = create_td("编辑","edit_btn(this)");
+        tr.appendChild(td);
+
+        // tbody添加 tr标签
+        console.log(tr);
+        tbody.appendChild(tr);
+
+
+
+    };
+
+    // 创建td标签
+    function create_td(text,attr_val) {
+
+        td = document.createElement("td");
+        var button = document.createElement("button");
+        button.innerHTML = text;  //
+        button.setAttribute("onclick",attr_val);
+        td.appendChild(button);
+        return td;
+    }
+
+
+   //删除事件
+
+    function del_btn(self){
+      console.log(self);
+      var del_tr = self.parentElement.parentElement;
+      tbody.removeChild(del_tr);
+
+    }
+
+    // 编辑事件
+    function edit_btn(self) {
+
+        // 文本处理
+        self.innerHTML = "保存";
+        self.setAttribute("onclick","keep_btn(this)");
+        
+        var children_td = self.parentElement.parentElement.children;
+        
+        for (var i= 0;i<children_td.length-2;i++){
+
+            var input = document.createElement("input");
+            input.setAttribute("type","text");
+            input.value = children_td[i].innerHTML;
+            children_td[i].innerHTML = "";
+            children_td[i].appendChild(input);
+
+        }
+    }
+    
+    // 保存事件
+    function keep_btn(self) {
+     var children_td = self.parentElement.parentElement.children;
+
+     for (var i= 0;i<children_td.length-2;i++){
+         var val =  children_td[i].firstElementChild.value;
+         children_td[i].innerHTML = val;
+     }
+     // 文本赋值为编辑
+     self.innerHTML = "编辑";
+     self.setAttribute("onclick","edit_btn(this)");
+
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

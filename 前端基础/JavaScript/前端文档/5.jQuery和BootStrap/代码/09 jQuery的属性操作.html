@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery3.6.js"></script>
+    <script>
+
+        $(function () {
+
+            // ==================  attr   ==================
+            // 获取属性值
+            // console.log($("#i1").attr("name"));
+            // console.log($("#i1").attr("class"));
+
+            // 设置属性属性值
+            //  $("#i1").attr("name","yuan");
+            //  $("#i1").attr("k1","v1");
+            // $("#i1").attr({name:"yuan","k1":"v1"});
+
+
+            // ==================  prop:表单属性   ==================
+            console.log($(":checkbox").attr("checked"));  // undefined
+            console.log($(":checkbox").prop("checked"));  // false
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+<div class="c1" id="i1" name="alvin">DIV</div>
+
+<input type="checkbox">
+
+</body>
+</html>

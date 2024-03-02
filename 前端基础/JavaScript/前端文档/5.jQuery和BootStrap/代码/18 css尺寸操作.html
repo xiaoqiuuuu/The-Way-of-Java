@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .c1{
+            width: 200px;
+            height: 200px;
+            border:10px solid red;
+            padding: 50px;
+            margin: 50px;
+
+        }
+    </style>
+    <script src="jquery3.6.js"></script>
+</head>
+<body>
+
+
+<div class="c1"></div>
+
+<script>
+
+    console.log($(".c1").width());
+    console.log($(".c1").height());
+
+    console.log($(".c1").innerWidth());
+    console.log($(".c1").innerHeight());
+
+    console.log($(".c1").outerWidth(true));
+    console.log($(".c1").outerHeight(true));
+
+
+</script>
+
+
+</body>
+</html>

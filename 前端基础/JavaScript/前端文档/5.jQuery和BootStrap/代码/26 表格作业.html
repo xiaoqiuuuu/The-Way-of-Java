@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery3.6.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+
+    <style>
+        table td{
+            width: 300px;
+        }
+
+        table tr td:first-child{
+            width: 100px;
+        }
+        table tr td:last-child{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary add_btn" >
+                添加员工
+            </button>
+            <p>
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>部门</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+
+                <tbody class="tbody">
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>23</td>
+                    <td>销售部</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger delete_btn">删除</button>
+                        <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>李四</td>
+                    <td>23</td>
+                    <td>销售部</td>
+                    <td>
+                       <button class="btn btn-sm btn-danger delete_btn">删除</button>
+                        <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>王五</td>
+                    <td>23</td>
+                    <td>销售部</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger delete_btn">删除</button>
+                        <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </p>
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form>
+                                    <div class="form-group">
+                                        <label for="name">姓名</label>
+                                        <input type="text" class="form-control" id="name"
+                                               placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age">年龄</label>
+                                        <input type="text" class="form-control" id="age"
+                                               placeholder="Age">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dep">部门</label>
+                                        <select name="" class="form-control" id="dep">
+                                            <option value="销售部">销售部</option>
+                                            <option value="运营部">运营部</option>
+                                            <option value="财务部">财务部</option>
+                                        </select>
+                                    </div>
+
+                             </form>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary keep_btn">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(".container .add_btn").click(function () {
+
+        $("#myModal").modal("show");
+
+    });
+
+
+    $(".keep_btn").click(function () {
+        // 隐藏模态对话框
+        $("#myModal").modal("hide");
+        // 添加节点
+        var name = $("#name").val();
+        var age = $("#age").val();
+        var dep = $("#dep").val();
+        var num = $(".tbody").children().length+1;
+        var tr = `<tr>
+                    <td>${num}</td>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td>${dep}</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger delete_btn">删除</button>
+                        <button class="btn btn-sm btn-warning edit_btn">编辑</button>
+                    </td>
+                </tr>`;
+
+        $(".tbody").append(tr);
+
+    });
+
+    // 事件委派: 删除事件
+
+    $(".tbody").on("click",".delete_btn",function () {
+        $(this).parent().parent().remove();
+
+        // 调整序号
+        $(".tbody tr td:first-child").each(function (i) {
+            console.log(i);
+            $(this).html(i+1);
+        })
+
+    });
+
+    // 编辑事件
+    $(".tbody").on("click",".edit_btn",function () {
+       // 调整标签
+        $(this).html("保存").attr("class","btn btn-sm btn-success keep_btn");
+
+        $(this).parent().siblings().each(function () {
+            if($(this).index()!== 0){
+                console.log($(this));
+                var v = $(this).html();
+                var inp = `<input type="text" value="${v}">`;
+                $(this).html("");
+                $(this).append(inp);
+            }
+        })
+
+
+    });
+
+    // 保存事件
+
+    $(".tbody").on("click",".keep_btn",function () {
+       // 调整标签的样式
+        $(this).html("编辑").attr("class","btn btn-sm btn-warning edit_btn");
+
+
+        $(this).parent().siblings().each(function () {
+               if($(this).index()!== 0){
+                  var v = $(this).children().first().val();
+                  $(this).html(v);
+               }
+
+        })
+
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>

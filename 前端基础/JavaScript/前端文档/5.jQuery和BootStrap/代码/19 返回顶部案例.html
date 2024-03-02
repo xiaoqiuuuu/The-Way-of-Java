@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .content{
+            height: 2000px;
+            background-color: lightgray;
+        }
+
+        .return_top{
+            width: 120px;
+            height: 50px;
+            background-color: lightseagreen;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .hide{
+            display: none;
+        }
+    </style>
+
+    <script src="jquery3.6.js"></script>
+</head>
+<body>
+
+
+<div class="content">
+    <h3>文章...</h3>
+</div>
+
+<div class="return_top hide">返回顶部</div>
+
+
+<script>
+
+
+    console.log($(window).scrollTop());
+
+    $(".return_top").click(function () {
+
+        $(window).scrollTop(0)
+        
+    });
+
+
+    $(window).scroll(function () {
+        console.log($(this).scrollTop());
+        var v =$(this).scrollTop();
+        if (v > 100){
+            $(".return_top").removeClass("hide");
+        }else {
+            $(".return_top").addClass("hide");
+        }
+
+    })
+</script>
+
+
+</body>
+</html>

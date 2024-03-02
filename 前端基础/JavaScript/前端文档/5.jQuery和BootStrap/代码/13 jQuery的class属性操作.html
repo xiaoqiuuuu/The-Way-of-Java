@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery3.6.js"></script>
+
+    <style>
+        .c1 {
+            color: red;
+        }
+
+        .c2 {
+            background-color: lightseagreen;
+        }
+
+        .c3 {
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="c1">hello JS</div>
+
+
+<script>
+
+    $(".c1").click(function () {
+        // $(this).addClass("c2");
+        // $(this).removeClass("c3");
+
+        $(this).addClass("c2").removeClass("c3");
+
+    });
+
+    $(".c1").mouseover(function () {
+        $(this).addClass("c3");
+    })
+
+</script>
+
+</body>
+</html>

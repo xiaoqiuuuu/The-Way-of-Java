@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        window.onload = function () {
+            var ele = document.querySelector(".c1");
+            console.log(ele);
+        };
+
+    </script>
+
+</head>
+<body>
+
+
+<form action="" id="i1">
+    <input type="text" name="user" class="c1">
+    <input type="submit">
+</form>
+
+
+<script>
+    
+    
+    var form = document.querySelector("#i1");
+    var user = document.querySelector(".c1");
+    form.onsubmit = function (e) {
+        // alert(123)
+        if (user.value.length<5){
+            alert("用户名的长度应该大于等于5！");
+            user.value = "";
+            // 阻止默认的提交事件
+            // 方式1：
+            // return false;
+            // 方式2：
+            // e.preventDefault()
+        }
+
+
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>

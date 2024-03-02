@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         /*.c2{*/
+         /*    color: red;*/
+         /*}*/
+
+         /*后代选择器*/
+         /*.c1 .c2 .c3{*/
+         /*    color: red;*/
+         /*}*/
+
+         /*子代选择器*/
+         .c1 > .c3{
+             color: green;
+         }
+
+    </style>
+</head>
+<body>
+
+<div class="c1">
+    <div class="c2">
+        <div class="c3">item1</div>
+    </div>
+</div>
+
+<div class="c1">
+    <div class="c3">item2</div>
+</div>
+
+</body>
+</html>

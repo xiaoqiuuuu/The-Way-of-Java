@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>注册用户</h3>
+
+<form action="http://127.0.0.1:8888" method="post" enctype="application/x-www-form-urlencoded">
+
+<p>
+    <label for="user">姓名：</label>
+    <input type="text" name="user" placeholder="用户名" id="user"></p>
+<p>密码：<input type="password" name="pwd"></p>
+<p>爱好：
+    篮球<input checked="checked" type="checkbox" name="hobby" value="basketball">
+    足球<input type="checkbox" name="hobby" value="football">
+    双色球<input type="checkbox" name="hobby" value="shuangseqiu">
+</p>
+<p>
+    性别：
+    男<input type="radio" name="gender" value="1">
+    女<input type="radio" name="gender" value="2">
+    其它<input type="radio" name="gender" value="3">
+</p>
+    
+<p>
+    生日： <input type="date" name="birth">
+</p>
+
+<p>
+    籍贯：
+    <select name="province" multiple="multiple" size="3">
+        <option value="hubei">湖北省</option>
+        <option value="hebei">河北省</option>
+        <option value="dongbei" selected="selected">东北省</option>
+    </select>
+</p>
+
+<p>
+    <textarea name="info" cols="50" rows="10" placeholder="个人简介"></textarea>
+</p>
+
+<p>
+    <input type="button" value="按钮">
+    <input type="reset" value="reset">
+    <input type="submit">
+    <button>提交数据</button>
+</p>
+
+</form>
+
+
+</body>
+</html>

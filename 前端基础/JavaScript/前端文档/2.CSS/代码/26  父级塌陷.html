@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="utf8">
+    <style>
+
+        .header{
+            border: 1px solid red;
+            /*height: 80px;*/
+        }
+
+        .c1{
+            width: 200px;
+            height: 60px;
+            background-color: #336699;
+            float: left;
+        }
+
+         .c2{
+            width: 100px;
+            height: 60px;
+            background-color: orange;
+            float: left;
+        }
+          .c3{
+            width: 100px;
+            height: 80px;
+            background-color: lightskyblue;
+            float: right;
+        }
+
+
+         .content{
+             width: 100%;
+             height: 60px;
+             background-color: gray;
+
+         }
+
+
+         /*清除父级塌陷*/
+         .clearfix:after{
+               display: block;
+               content: "";
+               clear: both;
+         }
+
+    </style>
+  </head>
+  <body>
+    <div class="header clearfix">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+    </div>
+
+   <div class="content">
+       content...
+   </div>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    远程导入-->
+    <!--    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>-->
+    <!--本地导入-->
+    <script src="jquery3.6.js"></script>
+
+</head>
+<body>
+
+
+<ul class="c1">
+    <li>123</li>
+    <li>234</li>
+    <li>345</li>
+</ul>
+
+
+<script>
+
+    // $(".c1 li").css("color","red");
+
+    console.log($(".c1 li"));   // dom集合对象  [dom1,dom2,...]
+
+
+    // 如何将jQury对象转换为Dom对象
+    console.log($(".c1 li")[1].innerHTML);
+
+    // 如何将Dom对象转换为jQuery对象;
+
+    var ele = document.querySelector(".c1 li");
+    // console.log(ele);
+    // ele.style.color = "red";
+    $(ele).css("color", "orange")  // [ele]
+
+
+</script>
+</body>
+</html>

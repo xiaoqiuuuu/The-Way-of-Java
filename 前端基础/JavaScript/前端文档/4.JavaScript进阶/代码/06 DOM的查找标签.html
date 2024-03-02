@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="i1">DIV1</div>
+
+<div class="c1">DIV</div>
+<div class="c1">DIV</div>
+<div class="c1">DIV</div>
+
+
+<div class="outer">
+    <div class="c1">item</div>
+</div>
+
+
+<div class="c2">
+    <div class="c3">
+        <ul class="c4">
+            <li class="c5" id="i2">111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script>
+
+   // 直接查找
+
+   var ele = document.getElementById("i1");  // ele就是一个dom对象
+   console.log(ele);
+
+   var eles = document.getElementsByClassName("c1"); // eles是一个数组 [dom1,dom2,...]
+   console.log(eles);
+
+   var eles2 = document.getElementsByTagName("div"); // eles2是一个数组 [dom1,dom2,...]
+   console.log(eles2);
+
+   var outer = document.getElementsByClassName("outer")[0];
+   var te = outer.getElementsByClassName("c1");
+   console.log(te);
+
+   // 导航查找
+
+    var c5 = document.getElementsByClassName("c5")[0];
+    console.log(c5);  // c5是一个DOM对象
+
+    console.log(c5.parentElement.lastElementChild);  // 返回值是dom对象
+    console.log(c5.parentElement.children);  // 返回值是dom对象数组
+    console.log(c5.nextElementSibling.nextElementSibling);
+    console.log(c5.parentElement.children);
+
+
+
+    // css选择器
+
+    var dom = document.querySelector(".c2 .c3 .c5");
+    console.log(":::",dom);
+
+    var doms = document.querySelectorAll("ul li");
+    console.log(":::",doms);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

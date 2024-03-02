@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery3.6.js"></script>
+</head>
+<body>
+
+
+<button class="add_btn">添加节点</button>
+<button class="del_btn">删除节点</button>
+<button class="replace_btn">替换节点</button>
+<div class="c1">
+    <h3>hello JS!</h3>
+    <h3 class="c2">hello world</h3>
+
+</div>
+
+
+<script>
+
+    $(".add_btn").click(function () {
+        // 创建jquery对象
+
+        // var $img = $("<img>");
+        // $img.attr("src","https://img1.baidu.com/it/u=3210260546,3888404253&fm=26&fmt=auto&gp=0.jpg")
+
+        // 节点添加
+
+        // $(".c1").append($img);
+        // $img.appendTo(".c1")
+
+        // $(".c1").prepend($img);
+        // $(".c2").before($img);
+        // 支持字符串操作
+        $(".c1").append("<img src ='https://img1.baidu.com/it/u=3210260546,3888404253&fm=26&fmt=auto&gp=0.jpg'>")
+
+
+    });
+
+
+    $(".del_btn").click(function () {
+
+        $(".c2").remove();
+        // $(".c2").empty();
+
+    });
+
+
+    $(".replace_btn").click(function () {
+        // alert(123);
+        // var $img = $("<img>");
+        // $img.attr("src","https://img1.baidu.com/it/u=3210260546,3888404253&fm=26&fmt=auto&gp=0.jpg")
+        // $(".c2").replaceWith($img);
+        $(".c2").replaceWith("<img src ='https://img1.baidu.com/it/u=3210260546,3888404253&fm=26&fmt=auto&gp=0.jpg'>");
+
+    })
+
+</script>
+
+</body>
+</html>

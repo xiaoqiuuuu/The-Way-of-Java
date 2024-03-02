@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery3.6.js"></script>
+</head>
+<body>
+
+
+
+<div class="outer">
+
+    <div class="item">
+        <input type="button" value="+" class="add_btn">
+        <input type="text">
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+    $(".add_btn").click(function () {
+
+         var $clone = $(this).parent().clone();
+         $clone.children(".add_btn").val("-").attr("class","remove_btn");
+         $(".outer").append($clone);
+
+    });
+
+
+    /*$(".remove_btn").click(function () {
+        $(this).parent().remove();
+    });*/
+
+
+    $(".outer").on("click",".remove_btn",function () {
+        $(this).parent().remove();
+    })
+
+    
+</script>
+
+
+
+
+</body>
+</html>

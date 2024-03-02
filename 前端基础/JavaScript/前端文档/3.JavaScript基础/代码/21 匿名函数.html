@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+     // 匿名函数调用方式1
+     var func = function () {
+         console.log("匿名函数...")
+     };
+
+     func();
+
+     // 匿名函数调用方式2
+    (function () {
+         console.log("匿名函数2...")
+     })();
+
+    (function (x,y) {
+        console.log(x+y)
+    })(2,7);
+
+
+    function bar() {
+
+        return function () {
+            console.log("inner函数！")
+        }
+
+    }
+
+    bar()();
+
+
+    var num3 = 10;
+    function func3(){
+        console.log(num3);
+        var num3 = 20;
+    }
+    func3();
+    console.log(num3);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

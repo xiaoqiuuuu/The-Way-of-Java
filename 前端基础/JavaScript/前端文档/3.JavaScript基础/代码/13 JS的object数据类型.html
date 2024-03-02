@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+
+        // 创建object对象的方式1：
+
+        // var person1 = new Object();
+        // person1.name = "alvin";
+        // person1.age  =18;
+        //
+        // console.log(person1.name);
+        // console.log(person1.age);
+
+        // 创建object对象的方式2：
+
+        // var person2 = {
+        //     name:"alvin",
+        //     age:18
+        // };
+        // console.log(person2,typeof person2);  // "object"
+
+
+        // var person3 = {
+        //     "name":"alvin",
+        //     "age":18
+        // };
+        // console.log(person3,typeof person3); // "object"
+        // console.log(person3.name);
+
+
+        // 访问object的方式
+
+       /* var person4 = {
+            name:"alvin",
+            "age":18
+        };
+        // console.log(person4.name);
+        // console.log(person4.age);
+
+        console.log(person4["name"]);
+        console.log(person4.age);*/
+
+        // 循环遍历object对象
+
+        arr = [123,234,345];
+        // for (var i=0;i<arr.length;i++){
+        //     console.log(i,arr[i])
+        // }
+
+
+       // for (var i in arr){
+       //     console.log(i,arr[i])
+       // }
+
+       var person5 = {
+            name:"alvin",
+            "age":18,
+            gender:"male"
+        };
+
+       for (var attr in person5){
+           console.log(attr,person5[attr])
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

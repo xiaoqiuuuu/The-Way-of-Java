@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+
+        // 初始化Date
+
+        var date = new Date();
+        console.log(date,typeof date); // Fri May 07 2021 12:15:46 GMT+0800 (中国标准时间) "object"
+        console.log(date.toLocaleString());
+
+        // 参数指定一个具体时间
+        var date2 = new Date("2004/3/20 11:12");
+        console.log(date2);
+        console.log(date2.getFullYear());
+
+        // 时间戳
+        var date3 = new Date(5000000000000);
+        console.log(date3.toLocaleString());
+
+        // 获取时间片
+        var today = new Date();
+
+        console.log(today.getFullYear());
+        console.log(today.getMonth());
+        console.log(today.getDate());
+        console.log(today.getDay());
+
+
+
+        console.log(today.toLocaleString());
+        console.log(today.toUTCString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

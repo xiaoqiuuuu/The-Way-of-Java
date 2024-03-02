@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*
+        行内选择器:1000
+        id:100  class 10  标签名:1
+        !important
+
+        */
+
+
+         /*#i1{*/
+         /*   color: #336699;*/
+         /*}*/
+         /*.c1{*/
+         /*   color: red;*/
+         /*}*/
+         /*div{*/
+         /*   color: #424242;*/
+         /*}*/
+
+
+         .c2 .c3 .c5{
+             color: red;
+         }
+
+         #i2{
+            color: rebeccapurple;
+         }
+
+        .c2 .c4 div{
+            color: green;
+        }
+
+        .c2 .c3 .c4 div{
+            color: lightcoral;
+        }
+
+        .c2 .c4 .c5{
+            color: lightskyblue;
+        }
+
+
+         .c5{
+             color: chartreuse!important;
+         }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="i1" class="c1">alvin</div>
+
+<div class="c2">
+    <div class="c3">
+        <div class="c4">
+            <div class="c5" id="i2" style="color: orange">item</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

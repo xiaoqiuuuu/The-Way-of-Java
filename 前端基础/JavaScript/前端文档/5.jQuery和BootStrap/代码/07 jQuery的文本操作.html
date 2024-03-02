@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery3.6.js"></script>
+    <script>
+
+        $(function () {
+
+            $(".c1").click(function () {
+                // 获取文本
+                // console.log(this.innerHTML);
+                // console.log(this.innerText);
+                console.log($(this).html());
+                console.log($(this).text());
+
+                // 设置文本
+                // $(this).html("hello world");
+                // $(this).text("hello world");
+
+                // $(this).html("<a href=''>hello world</a>");
+                $(this).text("<a href=''>hello world</a>");
+
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<p class="c1"><span>PPP</span></p>
+
+
+</body>
+</html>

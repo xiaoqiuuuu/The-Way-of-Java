@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outer .img img{
+             width: 590px;
+             height: 470px;
+        }
+
+        .outer{
+             width: 590px;
+             height: 470px;
+             margin: 100px auto;
+             position: relative;
+             border: 1px solid red;
+        }
+
+        .outer ul{
+            list-style: none;
+        }
+
+        .outer .img li{
+             position: absolute;
+             top: 0;
+             left: 0;
+        }
+
+        .outer .hide{
+            display: none;
+        }
+
+        .outer .num{
+            position: absolute;
+            z-index: 100;
+            bottom: 16px;
+            left: 16px;
+
+        }
+
+        .outer .num li{
+           display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+
+        .num li.current{
+            background-color: red;
+
+        }
+
+        .btn li{
+            position: absolute;
+            top:50%;
+            width: 30px;
+            height: 60px;
+            background-color: gray;
+            text-align: center;
+            line-height: 60px;
+            color: white;
+            margin-top: -30px;
+        }
+
+        .btn .left_btn{
+            left: 0;
+        }
+
+        .btn .right_btn{
+            right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+<div class="outer">
+      <ul class="img">
+            <li><a href=""><img src="https://imgcps.jd.com/ling4/100009077475/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5bd8253082acdd181d02fa71/c3196f74/cr/s/q.jpg" alt=""></a></li>
+            <li class="hide"><a href=""><img src="https://img12.360buyimg.com/pop/s590x470_jfs/t1/178599/8/1142/28979/6087858aE1679d862/173e0cfa2612b705.jpg.webp" alt=""></a></li>
+            <li class="hide"><a href=""><img src="https://imgcps.jd.com/ling4/6038430/5Lqs5Lic5aW954mp57K-6YCJ/MuS7tjjmipgz5Lu2N-aKmA/p-5bd8253082acdd181d02fa42/9ea6716c/cr/s/q.jpg" alt=""></a></li>
+            <li class="hide"><a href=""><img src="https://img12.360buyimg.com/pop/s1180x940_jfs/t1/174771/34/8431/98985/6095eaa2E8b8b4847/044f1b6318db4a9f.jpg.webp" alt=""></a></li>
+            <li class="hide"><a href=""><img src="https://img11.360buyimg.com/pop/s1180x940_jfs/t1/180648/29/4209/88436/609f7547Ec7b73259/74a4d25e8d614173.jpg.webp" alt=""></a></li>
+      </ul>
+
+     <ul class="num">
+         <li class="current"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+     </ul>
+
+    <ul class="btn">
+        <li class="left_btn"> < </li>
+        <li class="right_btn"> > </li>
+    </ul>
+</div>
+
+
+<script src="jquery3.6.js"></script>
+
+<script>
+
+    // 单击事件
+    var i =0;
+
+    $(".outer .btn .right_btn").click(go_right);
+
+    function go_right() {
+
+        if(i===4){
+            i=-1;
+        }
+        i++;
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current");
+
+    }
+
+    $(".outer .btn .left_btn").click(go_left);
+
+    function go_left() {
+        if(i===0){
+            i= 5;
+        }
+        i--;
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current");
+
+    }
+
+    // 自动轮播
+
+    var ID = setInterval(go_right,2000);
+
+    $(".outer").hover(function () {
+        // 悬浮到outer区域
+        clearInterval(ID);
+    },function () {
+        ID = setInterval(go_right,2000);
+    });
+
+    // 悬浮事件
+    
+    $(".num li").mouseover(function () {
+
+        i = $(this).index();
+        $(".outer .img li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        $(".outer .num li").eq(i).addClass("current").siblings().removeClass("current")
+
+
+    })
+    
+
+
+
+</script>
+
+</body>
+</html>

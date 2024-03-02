@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+     <script>
+        console.log(a);
+        var a = 10;
+        console.log(a);
+
+        function foo(a) {
+          console.log("---",a);
+          var a = 100;
+          console.log(a);
+          // function a() {}
+          console.log(a);
+          var b = function(){};
+          console.log(b);
+          function d() {}
+        }
+        var c = function (){
+        console.log("匿名函数C");
+        };
+        console.log(c);
+        foo(20);
+
+  </script>
+
+    <script>
+
+
+        var num3 = 10;
+        function func3(){
+            console.log("num3:::",num3);
+            var num3 = 20;
+        }
+        func3();
+        console.log("num3---",num3);
+
+
+        /*
+
+        // 全局编译
+
+        GO{
+           num3:undefined,
+           func3: function (){
+            console.log(num3);
+            var num3 = 20;
+        }
+
+        // 全局执行
+        var num3 = 10;
+        GO{
+           num3:10,
+           func3: function (){
+            console.log(num3);
+            var num3 = 20;
+        }
+
+
+        // 局部编译
+        func3.AO{
+           num3:undefined,
+        }
+
+
+        // 局部执行
+
+        func3.AO{
+           num3:20,
+        }
+
+        // 全局执行
+
+        GO.num3 = 10
+
+        }
+         */
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

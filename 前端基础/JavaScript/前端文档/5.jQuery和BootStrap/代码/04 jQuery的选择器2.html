@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    远程导入-->
+    <!--    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>-->
+    <!--本地导入-->
+    <script src="jquery3.6.js"></script>
+
+</head>
+<body>
+
+
+<ul class="c1">
+    <li>111</li>
+    <li class="c2">222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+    <li>666</li>
+</ul>
+
+
+<script>
+
+
+    // $(".c1 li").css("color","red");
+    // $(".c1 li:first").css("color","red");
+    // $(".c1 li:last").css("color","red");
+    // $(".c1 li:eq(3)").css("color","red");
+    // $(".c1 li:gt(1)").css("color","red");
+    // $(".c1 li:lt(4)").css("color","red");
+    // $(".c1 li:even").css("color","red");
+    // $(".c1 li:odd").css("color","red");
+    var index = 2;
+    // $(".c1 li:eq(index)").css("color","red");
+    $(".c1 li").eq(index).css("color", "red");
+    $(".c1 li").first().css("color", "red");
+    $(".c1 li").last().css("color", "red");
+
+
+</script>
+</body>
+</html>
