@@ -1,0 +1,57 @@
+<!--
+    该文档实现了定时显示时间的功能
+    点击开始即可显示当前时间，并随时间变化刷新
+    点击停止即可暂停展示并清空页面
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <script>
+        function test() {
+            // 循环定时器
+            let cnt = 0;
+            let timer = setInterval(function () {
+                console.log("执行了" + cnt + "次");
+                cnt += 1;
+            },1000);
+            clearInterval(timer);
+
+            // 单次定时器
+            setTimeout(function () {
+                console.log("执行了一次");
+            },10000); // 10 s 之后执行一次
+        }
+
+        let ID;
+        function start() {
+            if(ID === undefined) {
+                show_time();
+                ID = setInterval(show_time,1000);
+            }
+        }
+        function end() {
+            clearInterval(ID);
+            let showDate = document.getElementById("time");
+            showDate.value = "";
+            ID = undefined;
+        }
+
+        function show_time() {
+            let date = new Date();
+            let now = date.toLocaleString();
+            let showDate = document.getElementById("time");
+            showDate.value = now;
+            console.log(now);
+        }
+    </script>
+</head>
+<body>
+    <label for="time"></label><input type="text" id="time">
+    <button onclick="start()">开始</button>
+    <button onclick="end()">结束</button>
+</body>
+</html>

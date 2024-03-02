@@ -9,12 +9,12 @@
             data = ["星期日" , "星期一" , "星期二" , "星期三" , "星期四" , "星期五" , "星期六"]
 
             let year = date.getFullYear();
-            let month = date.getMonth();
+            let month = date.getMonth(); // 0 - 11 月
             let day = date.getDate();
             let hours = date.getHours();
             let minutes = date.getMinutes();
             let seconds = date.getSeconds();
-            let week = date.getDay();
+            let week = date.getDay(); // 星期天 - 星期六
             return year + "年" + (month + 1) + "月" + day + "日" + " " + hours + ":" + minutes + ":" + seconds + " " + data[week];
         }
 

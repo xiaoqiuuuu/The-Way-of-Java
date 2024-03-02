@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM对象</title>
+    <script>
+        console.log(window);
+
+        window.alert("您好，欢迎您！");
+
+        let ret = window.confirm("你确定吗");
+        console.log(ret);
+
+        let num = window.prompt("请输入一个数字");
+        console.log(num);
+
+        ret = window.confirm("是否关闭窗口");
+
+        if (ret) {
+            window.close()
+        } else {
+            //window.open("https://www.baidu.com","_blank","width=800px,height=500px,left=200px,top=200px"); // 新开一个浏览器
+            window.open("https://www.baidu.com","_self","width=800px,height=500px,left=200px,top=200px"); // 自己跳转自己
+            /**
+             * _blank：在一个新的浏览器窗口或标签页中打开链接。
+             * _parent：如果在框架（frame）内，则在父框架集中打开链接；如果没有父框架集或者当前框架已经是顶级窗口，则行为如同 _self。
+             * _top：在包含所有框架的整个浏览器窗口中打开链接，替换掉所有的框架集。
+             * _search：在某些旧版浏览器中用于搜索框，现在已不再使用。
+             */
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
