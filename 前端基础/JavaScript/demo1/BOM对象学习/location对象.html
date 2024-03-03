@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地址栏对象</title>
+</head>
+<body>
+<button onclick="func1()">查看Location对象</button>
+<button onclick="func2()">跳转到百度</button>
+<button onclick="func3()">F5</button>
+<script>
+    function func1(){
+        console.log( location );
+    }
+    // 地址栏对象控制和操作地址栏
+    // 所谓的地址就是当前页面所在地址
+    // 地址结构:
+    // 协议://域名:端口/路径/文件名?查询字符串#锚点
+    console.log( `协议=>${location.protocol}` );
+    console.log( `端口=>${location.port}` );
+    console.log( `域名=>${location.hostname}` );
+    console.log( `域名:端口=>${location.host}` );
+    console.log( `路径=>${location.pathname}` );
+    console.log( `查询字符串=>${location.search}` );
+    console.log(`完整的地址信息=>${location.href}`);
+
+    function func2(){
+        // location.href="http://www.baidu.com"; // 页面跳转
+        location.assign("http://www.baidu.com"); // 页面跳转
+    }
+
+    function func3(){
+        location.reload(); // 刷新页面
+    }
+</script>
+</body>
+</html>

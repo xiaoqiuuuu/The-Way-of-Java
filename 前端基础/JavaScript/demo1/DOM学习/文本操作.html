@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本操作</title>
+</head>
+<body>
+    <input type="text" id="i1" value="yuan">
+    <textarea name="" id="i2" cols="30" rows="10">123</textarea>
+    <select  id="i3">
+        <option value="hebei">河北省</option>
+        <option value="hubei">湖北省</option>
+        <option value="guangdong">广东省</option>
+    </select>
+
+    <script>
+
+        // input标签
+        var ele1 =document.getElementById("i1");
+        console.log(ele1.value);
+        ele1.onmouseover = function (){
+            this.value = "alvin"
+        }
+
+        // textarea标签
+        var ele2 =document.getElementById("i2");
+        console.log(ele2.value);
+        ele2.onmouseover = function (){
+            this.innerText = "welcome to JS world！"
+            this.value = "welcome to JS world！"
+        }
+        // select标签
+        var ele3 =document.getElementById("i3");
+        console.log(ele3.value);
+        ele3.value= "hebei"
+
+    </script>
+</body>
+</html>
