@@ -1,10 +1,9 @@
 <script lang="ts">
   import Person from "./components/Person.vue";
-  import Car from "./components/Car.vue";
 
   export default {
     name: 'App',
-    components:{Person,Car}
+    components:{Person}
   }
 </script>
 
@@ -12,9 +11,6 @@
   <div class="app">
     <h1>你好呀，我的第一个vue界面!</h1>
     <Person/>
-    <Car/>
-
-
   </div>
 </template>
 

@@ -1,25 +1,34 @@
-<script setup lang="ts" name="Person">
-  import {ref} from "vue";
+<script lang="ts">
+import {defineComponent} from 'vue'
 
-  let name = ref('张三');
-  let age = ref(18);
-  let email = "2365164682@qq.com";
-  let address = "上海市杨浦区军工路516";
-  let tel = '18888888888';
-
-  function modifyName() {
-    name.value === '张三' ? name.value = '李四' : name.value = '张三';
+export default defineComponent({
+  name: "Person",
+  data() {
+    return {
+      name: "张三",
+      age:18,
+      tel:18123456789,
+      email:"123@qq.com",
+      address:"北京市朝阳区"
+    }
+  },
+  methods:{
+    modifyName(){
+      if (this.name=="张三"){
+          this.name="李四";
+      } else {
+        this.name="张三";
+      }
+    },
+    modifyAge(){
+      this.age+=1;
+    },
+    showTle(){
+      alert(this.tel);
+    }
   }
-  function modifyAge() {
-    age.value++;
-  }
-
-  function showTle() {
-    alert(tel);
-  }
-
+})
 </script>
-
 
 <template>
   <div class="person">
