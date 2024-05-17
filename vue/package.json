@@ -9,9 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdit/plugin-katex": "^0.8.0",
+    "@mdit/plugin-mathjax": "^0.8.0",
+    "bootstrap": "^5.3.3",
+    "katex": "^0.16.10",
+    "markdown-it": "^14.1.0",
+    "markdown-it-katex": "^2.0.3",
+    "mathjax": "^3.2.2",
     "vue": "^3.4.19"
   },
   "devDependencies": {
+    "@types/mathjax": "^0.0.40",
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",

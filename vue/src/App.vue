@@ -1,29 +1,47 @@
-<script lang="ts">
-  import Person from "./components/Person.vue";
-  import Car from "./components/Car.vue";
-
-  export default {
-    name: 'App',
-    components:{Person,Car}
-  }
-</script>
-
 <template>
-  <div class="app">
-    <h1>你好呀，我的第一个vue界面!</h1>
-    <Person/>
-    <Car/>
-
+  <div class="container">
+    <column-list :list="list"></column-list>
 
   </div>
 </template>
 
+<script lang="ts">
+import {defineComponent} from "vue"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ColumnList , {ColumnProps} from "./components/ColumnList.vue";
+
+const testData: ColumnProps[] = [
+  {
+    id: 1,
+    title: 'test1专栏',
+    description: 'test1专栏描述',
+    avatar: 'https://picsum.photos/id/237/200/300',
+  },
+  {
+    id: 2,
+    title: 'test2专栏',
+    description: 'test2专栏描述',
+    avatar: 'https://picsum.photos/id/237/200/300',
+  }
+]
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    ColumnList
+  },
+  setup() {
+    return {
+      list: testData
+    }
+  }
+})
+
+
+</script>
+
 
 <style>
-  .app {
-    background-color: #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-  }
+
+
 </style>
